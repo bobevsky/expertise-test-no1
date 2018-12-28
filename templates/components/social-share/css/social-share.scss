@@ -1,0 +1,32 @@
+.social-share {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	@media screen and (min-width: 600px) {
+		flex-direction: row;
+	}
+	.label {
+		text-align: right;
+		font-size: $font-size-tiny;
+		padding-bottom: ($gutter-base/2);
+		margin: 0;
+		@media screen and (min-width: 425px) {
+			font-size: $font-size-small;
+		}
+		@media screen and (min-width: 600px) {
+			margin-right: ($gutter-base/2);
+		}
+	}
+
+	.items {
+		margin: 0;
+	}
+    	a {
+			text-decoration: none;
+    		&:before {
+    			padding: ($gutter-base/3);
+    			color: white;
+    			border-radius: 50%;
+    		}
+    	}
+}

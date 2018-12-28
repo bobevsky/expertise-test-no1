@@ -1,0 +1,39 @@
+<div id="article-widget">
+	{{#show-widget-with-img}}
+	<picture class="flex-img hidden-mobile">
+        <source media="(min-width: 1500px)" srcset="/templates/img/widget-img.png" />
+        <source media="(min-width: 751px)" srcset="/templates/img/widget-img.png" />
+        <source media="(max-width: 750px)" srcset="/templates/img/widget-img.png" />
+       	<img src="/templates/img/widget-img.png" alt="">
+    </picture>
+    <div class="article-text">
+    	<h2 class="title">
+	    	Redactionele widget met afbeelding
+	    </h2>
+	    <p>
+	    	Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Sed haec quis possit.
+	    </p>
+	    <button type="button" class="btn state-secondary"><span class="btn-animate">Voorbeeld button</span></button>  
+    </div>
+    {{/show-widget-with-img}}
+    {{#show-widget-no-img}}
+    <div class="article-text">
+    	<h2 class="title">
+	    	Redactionele widget
+	    </h2>
+	    <ul>
+	    	<li>- Landelijke dekking</li>
+	    	<li>- Korte communicatielijnen</li>
+	    	<li>- Kwalitatieve en snelle afwikkeling</li>
+	    	<li>- 24/7 toegang tot uw online dossier</li>
+	    	<li>- Goede prijs-/kwaliteitsverhouding</li>
+	    	<li>- Betrouwbaar</li>
+	    	<li>- Transparant</li>
+	    	<li>- Klantgericht</li>
+	    </ul>
+	    <button type="button" class="btn state-secondary"><span class="btn-animate">Voorbeeld button</span></button>  
+    </div>
+    {{/show-widget-no-img}}
+</div>
+
+

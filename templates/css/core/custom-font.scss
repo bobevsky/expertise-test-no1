@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Aller';
+  src: url('/templates/fonts/Aller.woff2') format('woff2'), 
+       url('/templates/fonts/Aller.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aller';
+  src: url('/templates/fonts/Aller-Bold.woff2') format('woff2'), 
+       url('/templates/fonts/Aller-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aller';
+  src: url('/templates/fonts/Aller-Light.woff2') format('woff2'), 
+       url('/templates/fonts/Aller-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}

@@ -1,0 +1,71 @@
+html, body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $text-color-base;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: $gutter-base;
+}
+
+h1 {
+  font-weight: $font-weight-bold;
+}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {
+  margin-top: 0;
+  margin-bottom: $gutter-base;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: $gutter-base;
+}
+  ol ol,
+  ul ul,
+  ol ul,
+  ul ol {margin-bottom: 0;}
+
+dl {
+  margin-top: 0;
+  margin-bottom: $gutter-base;
+}
+  dt {font-weight: $font-weight-bold;}
+  dd {margin-left: 0;}
+
+blockquote {
+  font-style: italic;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: $gutter-base;
+}
+
+b, strong {font-weight: $font-weight-bold;}
+
+a {
+  color: $primary-color;
+  @include transition-base(.3s);
+
+  @media(min-width: 1050px) {
+    &:hover {color: $primary-hover-color;}
+  }
+}
+
+.intro {font-size: $font-size-medium;}
+
+.desc {font-size: $font-size-small;}

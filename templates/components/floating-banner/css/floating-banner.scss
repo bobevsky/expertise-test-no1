@@ -1,0 +1,116 @@
+#floating-banner {
+
+	.hidden-mobile {
+		display: none;
+		@media screen and (min-width: 990px) {
+			display: block;
+		}
+	}
+	.wrap {
+		padding: 0;
+		@media screen and (min-width: 990px) {
+			padding: ($gutter-base*2.7) ($gutter-base*2);
+			position: relative;
+		}
+
+		@media screen and (min-width: 1180px) {
+			padding: ($gutter-base*2.7) ($gutter-base*2);
+		}
+
+		@media screen and (min-width: 1350px) {
+			padding: ($gutter-base*3) ($gutter-base*2);
+		}
+
+		@media screen and (min-width: 1530px) {
+			padding: ($gutter-base*2.7) ($gutter-base*2);
+		}
+
+		@media screen and (min-width: 1630px) {
+			padding: ($gutter-base*2.2) ($gutter-base*2);
+		}
+
+		@media screen and (min-width: 1820px) {
+			padding: ($gutter-base*1.7) ($gutter-base*2);
+		}
+
+	}
+
+	.center-content {
+		background-color: blue;
+		position: relative;  //mobile
+		background-color: $background-color-primary;
+
+		@media screen and (min-width: 990px) {
+			left: 0;
+			right: 0;
+			position: absolute;
+			bottom: 0;
+			width: 88%;
+			margin: 0 auto;
+		}
+		@media screen and (min-width: 1050px) {
+			width: 89%;
+		}
+		@media screen and (min-width: 1350px) {
+			width: 90%;
+		}
+		.center-content-inner {
+			width: 65%;
+			margin: 0 auto;
+			@media screen and (min-width: 990px) {
+				width: 70%;
+			}
+		}
+		.center-content-text {
+			padding: ($gutter-base*2) 0;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			@media screen and (min-width: 990px) {
+				width: 80%;
+				flex-direction: row;
+			}
+			
+			@media screen and (min-width: 1350px) {
+				padding: ($gutter-base*3) 0;
+			}
+
+		}
+
+		.title {
+			font-size: $font-size-extra-large;
+			font-weight: bold;
+			width: 80%;
+			color: $primary-color;
+			@media screen and (min-width: 768px) {
+				font-size: $font-size-giant;
+			}
+			@media screen and (min-width: 990px) {
+				width: 40%;
+			}
+		}
+
+		ul {
+			list-style-type: none;
+			padding-left: 0;
+			margin: 0;
+			li {
+				color: white;
+				font-weight: 300;
+				font-size: $font-size-small;
+				letter-spacing: $letter-spacing-small;
+				line-height: 1.8;
+				@media screen and (min-width: 990px) {
+					font-size: $font-size-base;
+				}
+			}
+		}
+
+		picture {
+			width: 32%;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}

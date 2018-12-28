@@ -1,0 +1,25 @@
+// Front-end core
+@import "reboot";
+
+@import "core/custom-font";
+@import "core/custom-icon-font"; 
+@import "variables";
+@import "core/animations";
+
+// The common elements (for this site)
+@import "core/common-font-elements";
+@import "core/common-form-elements";
+@import "core/common-elements";
+@import "core/buttons";
+
+// Component specific styles (for this site)
+@import "../components/menu-main/css/main-menu";
+@import "../components/banner/css/banner";
+@import "../components/logo-slider/css/logo-slider";
+@import "../components/footer/css/footer";
+@import "../components/social-share/css/social-share";
+@import "../components/articles-cont/css/articles-cont";
+@import "../components/article-widget/css/article-widget";
+@import "../components/article-content/css/article-content";
+@import "../components/content-list/css/content-list";
+@import "../components/floating-banner/css/floating-banner";

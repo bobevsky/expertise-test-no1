@@ -1,0 +1,103 @@
+#banner {
+	position: relative;
+	.inner {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		top: 0; 
+		right: 0;  
+		@extend %flex-center;
+		@media screen and (min-width: 990px) {
+			left: 15%; 
+			justify-content: stretch;
+			top: 0;
+			picture {
+				align-self: flex-end;
+			}
+		}
+		.hidden-mobile {
+			display: none;
+			@media screen and (min-width: 990px) {
+				display: block;
+				width: 22%;
+			}
+		}
+
+		.title {
+			font-size: $font-size-extra-large;
+			line-height: 2rem;
+			margin: 0;
+			color: $primary-color;
+			font-weight: $font-weight-bold;
+			@media screen and (min-width: 768px) {
+				font-size: $font-size-giant;
+			}
+			@media screen and (min-width: 990px) {
+				font-size: ($font-size-medium*2);
+				line-height: $line-height-small;
+			}
+			@media screen and (min-width: 1144px) {
+				font-size: ($font-size-medium*2.3);
+			}
+			@media screen and (min-width: 1305px) {
+				font-size: ($font-size-medium*2.7);
+			}
+
+			@media screen and (min-width: 1350px) {
+				font-size: ($font-size-medium*2.8);
+			}
+
+			@media screen and (min-width: 1574px) {
+				font-size: ($font-size-medium*3.3);
+			}
+
+			@media screen and (min-width: 1842px) {
+				font-size: ($font-size-medium*3.8);
+			}
+
+			@media screen and (min-width: 1915px) {
+				font-size: ($font-size-medium*4);
+			}
+			span {
+				display: inline;
+				@media screen and (min-width: 990px) {
+					display: block;
+				}
+			}
+			.subtitle {
+				font-size: $font-size-base;
+				margin: 0;
+				color: $primary-color;
+				font-weight: $font-weight-light;
+				display: block;
+				@media screen and (min-width: 768px) {
+					font-size: $font-size-medium;
+				}
+				@media screen and (min-width: 990px) {
+					font-size: $font-size-extra-large;
+					color: $text-color-base;
+				}
+				@media screen and (min-width: 1574px) {
+					font-size: ($font-size-medium*1.8);
+				}
+			}
+		}
+
+		.titles-cont {
+			text-align: center;
+			@media screen and (min-width: 990px) {
+				text-align: left;
+				align-self: flex-end;
+				padding-left: 1.25rem;
+				padding-bottom: 4.175rem;
+			}
+			@media screen and (min-width: 1350px) {
+				padding-bottom: 5.175rem;
+			}
+			@media screen and (min-width: 1842px) {
+				padding-bottom: 7rem;
+			}
+		}
+	}
+}
+

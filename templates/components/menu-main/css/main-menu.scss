@@ -1,0 +1,235 @@
+#trigger-menu-main {
+	width: 2.875rem;
+	height: $bar-height + $bar-spacing*2;
+	cursor: pointer;	
+	position: relative;
+	@media screen and (min-width: 990px) {
+		display: none;
+	}
+	
+	.bars-cont {
+		background: transparent;
+		border: none;
+		display: block;
+	}
+
+	.icon-bar,
+	.icon-bar::after,
+	.icon-bar::before {
+		width: $bar-width;
+		height: $bar-height;
+	}
+	
+	.icon-bar {
+		position: relative;
+		display: block;
+		transform: translateY($bar-spacing);
+		background: $hamburger-color;
+		transition: transform 0ms 300ms;
+		  
+		&.state-open {
+			background: rgba(255, 255, 255, 0);
+		
+			&:before, &:after {
+				background-color: white;
+			} 
+
+			&:before {
+				bottom: 0;
+				transform: rotate(-45deg);
+				transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), 
+							transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+			}
+
+			&:after {
+				top: 0;
+				transform: rotate(45deg);
+				transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), 
+							transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);
+			}
+		}
+
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			background: $hamburger-color;
+		}
+
+		&:before {
+			bottom: $bar-spacing;
+			transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), 
+						transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		&:after {
+			top: $bar-spacing;
+			transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), 
+						transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+		}
+	}
+
+	.login {
+		visibility: hidden;
+		position: absolute;
+		left: -2.5rem;
+		&.state-open {
+			@include bounceOff(0.7s);
+			top: -0.5rem;
+			visibility: visible;
+			@media screen and (min-width: 990px) {
+	            visibility: hidden;
+	        }
+		}
+	}
+}
+
+#menu-main {
+	padding: 0.8rem 0;
+	background-color: white;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	border-bottom: 2px solid $border-color-primary;
+	&:before {
+		height: calc(40.4px + 12.8px + 12.8px);
+		margin-left: 100%;
+		content: '';
+		opacity: 0;
+		position: fixed;
+		transition: all .2s ease-in;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: $background-color-tertiary;
+	}
+	&.state-open {
+		&:before {
+			opacity: 1;
+			margin-left: 0;
+			@media screen and (min-width: 990px) {
+	            background-color: transparent;
+	        }
+		}	
+	}
+	@media screen and (min-width: 990px) {
+		padding: 0;
+	}
+	.wrap {
+	    @media screen and (min-width: 990px) {
+			padding: 0 ($gutter-base*2);
+		}
+	    .logo-wrap {
+			width: 4.375rem;
+			@media screen and (min-width: 990px) {
+				width: 5.375rem;
+			}
+			.img {
+				width: 100%;
+				z-index: 1111;
+				position: relative;
+				&:first-child {
+					@media screen and (min-width: 990px) {
+						display: block;
+					}
+				}
+				&:last-child {
+					@media screen and (min-width: 990px) {
+						display: none;
+					}
+				}
+			}
+			.state-hidden {
+				display: none;  
+			}
+		}
+	}
+
+	.nav {
+		padding-left: 0;
+		transition: all .2s ease-in;
+		margin-bottom: 0;
+		margin-right: 100%;
+		list-style-type: none;
+		font-family: $font-family-base;
+		font-weight: $font-weight-bold;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		right: 0;
+		top: calc(12.8px + 12.8px + 41.65px);
+		bottom: 0;
+		opacity: 0;
+		visibility: hidden;
+		@media screen and (min-width: 990px) {
+			list-style-type: none;
+			font-family: $font-family-base;
+			font-weight: $font-weight-bold;
+			margin-bottom: 0;
+			padding: 0;
+			visibility: visible;
+			position: static;
+			margin-right: 0;
+			opacity: 1;
+			backface-visibility: hidden;
+		}
+		.el {
+			text-align: center;
+	    	width: 100%;
+	    	transition: background-color .2s ease-in;
+	    	@media screen and (min-width: 990px) {
+	    		width: auto;
+	    		float: left;
+	    		padding: 0 ($gutter-base/2);
+	    	}
+	    	a {
+	    		text-decoration: none;
+	    		font-size: $font-size-medium;
+	    		width: 100%;
+	    		padding: 1.375rem 0;
+				display: inline-block;
+				@media screen and (min-width: 990px) {
+			    	padding: 0;
+			    	margin: 1.375rem 0;
+			    	font-size: $font-size-medium;
+				}
+	    	}
+		}
+		&.state-open {
+			margin-right: 0;
+			opacity: 1;
+			visibility: visible;
+			background-color: $background-color-tertiary;
+			a {
+				color: white;
+				@media screen and (min-width: 990px) {
+		            color: $text-color-base;
+		            &:hover {
+		            	color: $text-color-secondary;
+		            	@include transition-base(.3s);
+		            }
+		        }
+			}
+			.el:hover {
+				background-color: lighten($background-color-tertiary, 3%);
+				@media screen and (min-width: 990px) {
+		            background-color: white;
+		        }
+			}
+			@media screen and (min-width: 990px) {
+	            background-color: $primary-color;
+	        }
+			
+		}
+	}
+
+	.flex-between {
+		@extend %flex-between;
+		align-items: center;
+	}
+}
+
+
+

@@ -1,0 +1,153 @@
+<div id="articles-cont">
+	{{#show-single-article-text-first}}
+	<h1 class="title">Voorbeeld redactionele pagina</h1>
+	<article>
+		<component data-renderer="article-content"></component>
+		<component data-renderer="flex-vid-advanced"></component>
+	</article>
+	{{/show-single-article-text-first}}
+	{{#show-multiple-articles}}
+	<a href="News-detail-page.html" class="link">
+		<article class="main-article">
+			<picture class="flex-img">
+				<source media="(min-width: 1500px)" srcset="/templates/img/main-article-img.png" />
+				<source media="(min-width: 751px)" srcset="/templates/img/main-article-img.png" />
+				<source media="(max-width: 750px)" srcset="/templates/img/main-article-img.png" />
+				<img src="/templates/img/main-article-img.png" alt="">
+			</picture>
+			<div class="main-article-text">
+				<h2 class="title">
+					Quo usque tandem abutere?
+				</h2>
+				<p>
+					<span>06-06-2018</span> <span class="separator"> nieuwsitem</span>
+				</p>
+			</div>
+		</article>
+	</a>
+	<div class="articles-wrap">
+		<a href="News-detail-page.html" class="link state-secondary">
+			<article class="article-block">
+				<picture class="flex-img hidden-mobile">
+					<source media="(min-width: 1500px)" srcset="/templates/img/first-article-block-img.png" />
+					<source media="(min-width: 751px)" srcset="/templates/img/first-article-block-img.png" />
+					<source media="(max-width: 750px)" srcset="/templates/img/first-article-block-img.png" />
+					<img src="/templates/img/first-article-block-img.png" alt="">
+				</picture>
+				<div class="article-block-text">
+					<div class="article-overlay">
+						<h2 class="title">
+							Consectetur adipisici elit
+						</h2>
+						<p>
+							<span>06-06-2018</span> <span class="separator">nieuwsitem</span>
+						</p>
+					</div>
+				</div>
+			</article>
+		</a>
+		<a href="News-detail-page.html" class="link state-secondary">
+			<article class="article-block">
+				<picture class="flex-img hidden-mobile">
+					<source media="(min-width: 1500px)" srcset="/templates/img/second-article-block-img.png" />
+					<source media="(min-width: 751px)" srcset="/templates/img/second-article-block-img.png" />
+					<source media="(max-width: 750px)" srcset="/templates/img/second-article-block-img.png" />
+					<img src="/templates/img/second-article-block-img.png" alt="">
+				</picture>
+				<div class="article-block-text">
+					<div class="article-overlay">
+						<h2 class="title">
+							Curabitur est gravida et libero vitae dictum
+						</h2>
+						<p>
+							<span>06-06-2018</span> <span class="separator">nieuwsitem</span>
+						</p>
+					</div>
+				</div>
+			</article>
+		</a>
+		<a href="News-detail-page.html" class="link state-secondary">
+			<article class="article-block">
+				<picture class="flex-img hidden-mobile">
+					<source media="(min-width: 1500px)" srcset="/templates/img/third-article-block-img.png" />
+					<source media="(min-width: 751px)" srcset="/templates/img/third-article-block-img.png" />
+					<source media="(max-width: 750px)" srcset="/templates/img/third-article-block-img.png" />
+					<img src="/templates/img/third-article-block-img.png" alt="">
+				</picture>
+				<div class="article-block-text">
+					<div class="article-overlay">
+						<h2 class="title">
+							Curabitur est gravida et libero vitae dictum
+						</h2>
+						<p>
+							<span>06-06-2018</span> <span class="separator">nieuwsitem</span>
+						</p>
+					</div>
+				</div>
+			</article>
+		</a>
+		<a href="News-detail-page.html" class="link state-secondary">
+			<article class="article-block">
+				<picture class="flex-img hidden-mobile">
+					<source media="(min-width: 1500px)" srcset="/templates/img/fourth-article-block-img.png" />
+					<source media="(min-width: 751px)" srcset="/templates/img/fourth-article-block-img.png" />
+					<source media="(max-width: 750px)" srcset="/templates/img/fourth-article-block-img.png" />
+					<img src="/templates/img/fourth-article-block-img.png" alt="">
+				</picture>
+				<div class="article-block-text">
+					<div class="article-overlay">
+						<h2 class="title">
+							Donec sed odio operae, eu vulputate felis
+						</h2>
+						<p>
+							<span>06-06-2018</span> <span class="separator">nieuwsitem</span>
+						</p>
+					</div>
+				</div>
+			</article>
+		</a>
+		<a href="News-detail-page.html" class="link state-secondary">
+			<article class="article-block">
+				<picture class="flex-img hidden-mobile">
+					<source media="(min-width: 1500px)" srcset="/templates/img/fifth-article-block-img.png" />
+					<source media="(min-width: 751px)" srcset="/templates/img/fifth-article-block-img.png" />
+					<source media="(max-width: 750px)" srcset="/templates/img/fifth-article-block-img.png" />
+					<img src="/templates/img/fifth-article-block-img.png" alt="">
+				</picture>
+				<div class="article-block-text">
+					<div class="article-overlay">
+						<h2 class="title">
+							Quam diu etiam furor iste tuus nos eludet?
+						</h2>
+						<p>
+							<span>06-06-2018</span> <span class="separator">nieuwsitem</span>
+						</p>
+					</div>
+				</div>
+			</article>
+		</a>
+	</div>
+	{{/show-multiple-articles}}
+	{{#show-single-article-img-first}}
+	<article>
+		<picture class="flex-img hidden-mobile">
+			<source media="(min-width: 1500px)" srcset="/templates/img/main-article-img.png" />
+			<source media="(min-width: 751px)" srcset="/templates/img/main-article-img.png" />
+			<source media="(max-width: 750px)" srcset="/templates/img/main-article-img.png" />
+			<img src="/templates/img/main-article-img.png" alt="">
+		</picture>
+		<div class="desc">
+			<div class="desc-date">
+				<p>
+					<span>06-06-2018</span> <span class="separator">nieuwsitem</span>
+				</p>
+			</div>
+			<component data-renderer="social-share"></component>
+		</div>
+		<component data-renderer="article-content"></component>
+		<div class="link-bottom">
+			<a href="/" class="link state-primary">Terug naar overzicht</a>
+		</div>
+	</article>
+	{{/show-single-article-img-first}}
+</div>

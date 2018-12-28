@@ -1,0 +1,83 @@
+.btn {
+    cursor: pointer;
+    line-height: .3125rem;
+    display: inline-block;
+    text-align: center;
+    padding: ($gutter-base/2) $gutter-base;
+    border-radius: $border-radius-medium;
+    font-size: $font-size-base;
+    @include transition-base(.3s);
+
+    &.state-primary {
+        display: none;
+            @media screen and (min-width: 990px) {
+                display: block;
+                position: relative;
+                z-index: 111;
+                border: 2px solid $border-color-base;
+                color: $secondary-color;
+                background-color: $background-color-base;
+                font-family: $font-family-base;
+                font-weight: $font-weight-bold;
+                &:hover {
+                    color: $secondary-hover-color;
+                    border: 2px solid $secondary-hover-color;
+                }
+            }
+    }
+    &.state-secondary {
+        color: $primary-color;
+        background-color: $background-color-primary;
+        font-family: $font-family-base;
+        font-weight: $font-weight-bold;
+        border: none;
+        &:hover {
+            background-color: $secondary-hover-color;
+        }
+    }
+    .btn-animate {
+        transition: transform .2s;
+        display: block;
+    }
+    &:active {
+        .btn-animate {
+            transform: translateY(0.1875rem);
+        }
+    }
+}
+
+.btn-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: -($gutter-base/4);
+    margin-top: -($gutter-base/4);
+
+    .btn {
+        flex: 1 1 auto;
+        margin-left: ($gutter-base/4);
+        margin-top: ($gutter-base/4);
+    }
+}
+
+.link {
+    text-decoration: none;
+    font-size: $font-size-base;
+    font-weight: bold;
+    display: block;
+    @include transition-base(.3s);
+
+    &.state-primary {
+        color: $secondary-color;
+        &:hover {
+            color: $secondary-hover-color;
+        }
+    }
+
+    &.state-secondary {
+        color: $text-color-base;
+        &:hover {
+            color: $text-color-secondary;
+        }
+    }
+}

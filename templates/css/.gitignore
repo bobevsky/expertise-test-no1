@@ -1,0 +1,6 @@
+*.css
+!editor.css
+!ie.css
+*.map
+.sass-cache
+!.gitignore

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" href="/templates/css/global.css">
+
+        <title>Home</title>
+        <meta name="description" content="Beschrijving">
+    </head>
+    <body>
+
+        <component data-renderer="menu-main"></component>
+        <component data-renderer="big-banner-with-inner"></component>
+
+        <div id="intro">
+            <div class="wrap">
+                <div class="inner">
+                    <h2 class="title">Een expertisebureau van deze tijd!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Ambitioni dedisse scripsisse iudicaretur. Paullum deliquit, ponderibus modulisque suis ratio utitur.</p>
+                    <a href="/" class="link state-primary">Call-to-action</a>
+                </div>
+            </div>
+        </div>
+        
+        <component data-renderer="floating-banner"></component>
+        <component data-renderer="content-list"></component>
+        <component data-renderer="logo-slider"></component>
+        <component data-renderer="footer"></component>
+
+        <!-- Start // Scripts -->
+        <script src="/templates/js/assets/jquery.js"></script>
+        <script src="/templates/js/assets/mustache.min.js"></script>
+        <component data-renderer="scripts"></component>
+        <!-- End // Scripts -->
+        <!-- Start // Renderer can be removed from production/dev, this is purely for front-end G.O. development. -->
+        <script data-renderer="remove-renderer-when-done" src="/templates/js/renderer.js"></script>
+        <script data-renderer="remove-renderer-when-done" src="/templates/js/renderer-init.js"></script>
+        <!-- End // Renderer... -->
+
+    </body>
+</html>

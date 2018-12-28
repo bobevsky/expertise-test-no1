@@ -1,0 +1,125 @@
+label {display: block;}
+
+input, textarea, select {
+  display: block;
+  width: 100%;
+  @include transition-base(.3s);
+
+  &:focus {outline: none;}
+
+  &.state-invalid {
+    &:focus {
+      &:valid {}
+    }
+  }
+}
+
+::-webkit-input-placeholder {color: $text-color-light;}
+:-moz-placeholder           {color: $text-color-light;}
+::-moz-placeholder          {color: $text-color-light;}
+:-ms-input-placeholder      {color: $text-color-light;}
+
+input[type=checkbox], input[type=radio] {
+  //display: none;
+  display: inline-block;
+  width: auto;
+
+  & + label {
+    display: inline-block;
+
+    &:before {
+      //@include icon-font;
+    }
+  }
+    &:checked + label:before {}
+}
+  input[type=checkbox] {
+    -webkit-appearance: checkbox;
+  }
+  input[type=radio] {
+    -webkit-appearance: radio;
+  }
+  input[type=checkbox] + label:before {border-radius: $border-radius-base;}
+  input[type=radio] + label:before    {border-radius: 50%;}
+
+
+.form-row {
+  &.state-aligned {
+    @media(min-width: 750px) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      & > label {
+        flex: 1 1 20%;
+        /* Remove possible paddings from this element for flex to work properly in IE. */
+        /* Also remove comments, obviously. */
+      }
+      .form-field, .form-options {flex: 1 1 80%;}
+    }
+  }
+}
+
+.form-field {
+  position: relative;
+
+  /* Style this the way you need it remove it */
+  /* Also remove comments, obviously. */
+  .validation {
+    display: block;
+    position: absolute;
+    bottom: 0; right: 0;
+    background: red;
+    width: 1rem; height: 1rem;
+  }
+    textarea + .validation {bottom: auto; top: 0;}
+
+  /* Style this the way you need it remove it */
+  /* Also remove comments, obviously. */
+  &.state-select-field {
+    select {
+      position: relative;
+      z-index: 2;
+      background: transparent;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      bottom: 0; right: 0;
+      background: blue;
+      width: 1rem; height: 1rem;
+    }
+  }
+}
+
+.form-options {}
+
+.form-row-validation {
+  display: none;
+
+  &.state-show {
+    display: block;
+    @include fadeIn(.3s);
+  }
+}
+
+.form-row-submit {
+  .btn {
+    &.state-submitting {
+      cursor: progress;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        border-width: ($gutter-base/6);
+        border-style: solid;
+        border-color: green $background-color-base $background-color-base;
+        width: ($gutter-base/1.5); height: ($gutter-base/1.5);
+        border-radius: 50%;
+        @include spin(.9s);
+      }
+    }
+  }
+}

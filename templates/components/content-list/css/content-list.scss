@@ -1,0 +1,45 @@
+#content-list {
+	margin: ($gutter-base*2) 0;
+	.inner {
+		width: 67%;
+		margin: 0 auto;
+
+		.title {
+			font-weight: $font-weight-light;
+			font-size: $font-size-extra-large;
+			@media screen and (min-width: 768px) {
+				font-size: $font-size-giant;
+			}
+		}
+		.inner-list {
+			.block-title { 
+				font-size: $font-size-medium;
+				margin: 0;
+				letter-spacing: $letter-spacing-small;
+				position: relative;				
+			}
+			p {
+				font-size: $font-size-small;
+				line-height: $line-height-base;
+				margin: ($gutter-base/2) 0;
+				letter-spacing: $letter-spacing-small;
+				@media screen and (min-width: 990px) {
+					font-size: $font-size-base;
+					letter-spacing: 0;
+				}
+
+			}
+			.blocks-cont {
+				list-style-type: none;
+				@media screen and (min-width: 768px) {
+					padding-left: ($gutter-base*6);
+				}
+			}
+			.block {
+				@media screen and (min-width: 990px) {
+					width: 90%;
+				}
+			}
+		}
+	}
+}

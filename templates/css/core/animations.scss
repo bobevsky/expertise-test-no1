@@ -1,0 +1,70 @@
+    @mixin animate($name, $duration){
+        animation: $name $duration;
+        animation-fill-mode: both;
+    }
+
+    @mixin fadeIn($duration) {
+        @include animate(fadeIn, $duration);
+    }
+    @keyframes fadeIn {
+        from  {opacity: 0;}
+        to    {opacity: 1;}
+    }
+
+    @mixin fadeInDown($duration) {
+        @include animate(fadeInDown, $duration);
+    }
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @mixin spin($duration) {
+        @include animate(spin, $duration);
+        animation-iteration-count: infinite;
+    }
+    @keyframes spin {
+        0%    {transform: rotate(0deg);}
+        100%  {transform: rotate(360deg);}
+    }
+
+
+    @mixin bounceOff($duration) {
+        @include animate(bounceOff, $duration);
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes bounceOff {
+        0% {
+            transform:translateY(-100%);
+            opacity: 0;
+        }
+        10% {
+            transform:translateY(-100%);
+        }
+        20% {
+            transform:translateY(-50%);
+        }
+
+        50% {
+            transform:translateY(0%);
+            padding-bottom: 0.3125rem;
+        }
+
+        75% {
+            transform:translateY(-15%);
+        }
+
+        100% {
+            transform:translateY(0);
+            padding-bottom: 0.3125rem;
+            opacity: 1;
+        }
+    }
+

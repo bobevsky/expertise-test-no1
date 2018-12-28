@@ -1,0 +1,130 @@
+::selection {background: transparentize($primary-color, .80);}
+
+body {
+    background-color: $background-color-base;
+    &.state-open {
+        overflow: hidden;
+        @media screen and (min-width: 990px) {
+            overflow: auto;
+        }
+    }
+}
+
+.section {
+    padding-top: $gutter-base;
+    padding-bottom: $gutter-base;
+
+    @media (min-width: 1000px) {
+        padding-top: ($gutter-base*2);
+        padding-bottom: ($gutter-base*2);
+    }
+}
+
+.wrap {
+    max-width: $max-width-base;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: ($gutter-base/2);
+    padding-right: ($gutter-base/2);
+
+    @media (min-width: 1000px) {
+        padding-left: $gutter-base;
+        padding-right: $gutter-base;
+    }
+}
+
+.content-wrapper {
+    margin: ($gutter-base*1.5) 0;
+    
+    @media screen and (min-width: 990px) {
+        margin: ($gutter-base*2) 0 ($gutter-base*3.5) 0;
+    }
+
+    .section-title {
+        font-size: $font-size-extra-large;
+        margin-top: 0;
+        margin-bottom: ($gutter-base/2);
+        @media screen and (min-width: 768px) {
+            font-size: $font-size-giant;
+        }
+    }
+
+    .wrap {
+        max-width: $max-width-base;
+        margin: 0 auto;
+        padding: 0 ($gutter-base/2);
+        
+        &.flex-between {
+            display: block;
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        @media screen and (min-width: 990px) {
+            padding: 0 ($gutter-base*2);
+        }
+    }   
+}
+
+.sidebar {
+    margin-top: ($gutter-base*1.5);
+    @media screen and (min-width: 550px) {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+        width: 40%;
+        justify-content: stretch;
+        align-items: stretch;
+        margin-top: 0
+    }
+}
+
+hr {
+    height: 0;
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: $border-color-base;
+    margin-top: 0;
+    margin-bottom: $gutter-base;
+}
+
+.flex-img img, .flex-vid iframe {
+    width: 100%;
+    display: block;
+}
+
+#intro {
+    margin: ($gutter-base*1.5) 0;
+    .wrap {
+        margin: 0 auto;
+        max-width: 73.125rem;
+    }
+    .inner {
+        width: 67%;
+        margin: 0 auto; 
+
+        .title {
+            font-size: $font-size-extra-large;
+            margin: 0;
+                @media screen and (min-width: 768px) {
+                    font-size: $font-size-giant;
+                }
+        }
+
+        p {
+            font-size: $font-size-small;
+            padding: ($gutter-base/2) 0;
+            margin: 0;
+            @media screen and (min-width: 700px) {
+                width: 82%;
+            }
+            @media screen and (min-width: 990px) {
+                font-size: $font-size-base;
+            }
+        }
+    }
+}

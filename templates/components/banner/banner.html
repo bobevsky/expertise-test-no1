@@ -1,0 +1,33 @@
+<div id="banner">
+	{{#show-big-banner}}
+	<picture class="flex-img">
+        <source media="(min-width: 1500px)" srcset="/templates/img/banner-main-img.png" />
+        <source media="(min-width: 751px)" srcset="/templates/img/banner-main-img.png" />
+        <source media="(max-width: 750px)" srcset="/templates/img/banner-main-img.png" />
+        <img src="/templates/img/banner-main-img.png" alt="">
+    </picture>
+		<div class="inner">
+			<picture class="flex-img hidden-mobile">
+			    <source media="(min-width: 1500px)" srcset="/templates/img/illustratie.png" />
+			    <source media="(min-width: 751px)" srcset="/templates/img/illustratie.png" />
+			    <source media="(max-width: 750px)" srcset="/templates/img/illustratie.png" />
+			    <img src="/templates/img/illustratie.png" alt="">
+			</picture>
+			<div class="titles-cont">
+			    <h1 class="title">
+			    	<span class="subtitle">3.0 Expertise</span>
+			    	<span>Lorem ipsum</span> 
+			    	<span>dolor sit amet</span>
+			    </h1>
+			</div>
+		</div>
+	{{/show-big-banner}}
+	{{#show-small-banner}}
+	<picture class="flex-img">
+        <source media="(min-width: 1500px)" srcset="/templates/img/banner-main-img-small.png" />
+        <source media="(min-width: 751px)" srcset="/templates/img/banner-main-img-small.png" />
+        <source media="(max-width: 750px)" srcset="/templates/img/banner-main-img-small.png" />
+        <img src="/templates/img/banner-main-img-small.png" alt="">
+    </picture>
+	{{/show-small-banner}}
+</div>

@@ -1,0 +1,20 @@
+#article-content {
+	p {
+		font-size: $font-size-small;
+		margin-bottom: ($gutter-base/2);
+		span a {
+			color: $secondary-color;
+			&:hover {
+				color: $secondary-hover-color;
+			}
+		}
+	}
+
+	.caption {
+		font-size: $font-size-base;
+		color: $secondary-color;
+		@media screen and (min-width: 768px) {
+			font-size: $font-size-medium;
+		}
+	}
+}

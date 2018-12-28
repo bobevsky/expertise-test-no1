@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" href="/templates/css/global.css">
+
+        <title>News - Overview</title>
+        <meta name="description" content="Beschrijving">
+    </head>
+    <body>
+        <component data-renderer="menu-main"></component>
+        
+        <div class="content-wrapper">
+            <div class="wrap">
+                <h1 class="section-title">Voorbeeld nieuws pagina</h1>
+            </div>
+            <div class="wrap flex-between">
+                <component data-renderer="multiple-articles"></component>
+                <div class="sidebar">
+                      <component data-renderer="widget-with-img"></component>
+                </div>
+            </div>
+        </div>
+
+
+        <component data-renderer="footer"></component>
+        
+
+        <!-- Start // Scripts -->
+        <script src="/templates/js/assets/jquery.js"></script>
+        <script src="/templates/js/assets/mustache.min.js"></script>
+        <component data-renderer="scripts"></component>
+        <!-- End // Scripts -->
+        <!-- Start // Renderer can be removed from production/dev, this is purely for front-end G.O. development. -->
+        <script data-renderer="remove-renderer-when-done" src="/templates/js/renderer.js"></script>
+        <script data-renderer="remove-renderer-when-done" src="/templates/js/renderer-init.js"></script>
+        <!-- End // Renderer... -->
+
+    </body>
+</html>

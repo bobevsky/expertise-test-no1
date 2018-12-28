@@ -1,0 +1,63 @@
+#logo-slider {
+    display: none; // mobile
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+    @media screen and (min-width: 1070px) {
+        padding: ($gutter-base*3) 0;
+        background-color: $background-color-secondary;
+        display: block;
+    }
+    padding: ($gutter-base*3) 0;
+    background-color: $background-color-secondary;
+    
+    .title {
+        @media screen and (min-width: 768px) {
+            text-align: center;
+            font-weight: $font-weight-light;
+            font-size: $font-size-giant;
+        }
+    }
+
+    .slides {
+        @media screen and (min-width: 768px) {
+            padding-left: $gutter-base;
+        }
+        @media screen and (min-width: 990px) {
+            padding-left: 1.5625rem;
+        }
+    }
+
+    .flex-control-nav {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        margin-top: $gutter-base;
+        @media screen and (min-width: 768px) {
+            padding-left: 0.625rem;
+        }
+        @media screen and (min-width: 990px) {
+            padding-left: 0;
+        }
+    }
+
+    .flex-control-nav li a {
+        background: #707070;
+        border-radius: 50%;
+        display: inline-block;
+        height: 0;
+        overflow: hidden;
+        padding-top: 0.625rem;
+        width: 0.625rem;
+        margin-right: 0.3125rem;
+        &:hover {
+            background: $secondary-hover-color;
+        }
+    }
+
+    .flex-control-nav li a.flex-active {
+        background: $background-color-primary;
+    }
+}
+
+

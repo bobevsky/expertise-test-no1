@@ -1,0 +1,78 @@
+/* Font settings */
+$font-family-base:    "Aller", sans-serif;
+
+$font-size-tiny:        .6875rem; /* Cheatsheet: 11px by default */
+$font-size-small:       .875rem; /* Cheatsheet: 14px by default */
+$font-size-base:        1rem; /* Cheatsheet: 16px by default */
+$font-size-medium:      1.125rem; /* Cheatsheet: 18px by default */
+$font-size-large:       1.3rem; /* Cheatsheet: 20.8px by default */
+$font-size-extra-large: 1.5rem; /* Cheatsheet: 24px by default */
+$font-size-giant:       1.75rem; /* Cheatsheet: 28px by default */
+
+$line-height-base:    1.5; /* Cheatsheet: 24px by default */
+$line-height-small:   1.25; /* Cheatsheet: 20px by default */
+
+$letter-spacing-small: 0.04375rem;
+
+$font-weight-normal:  400;
+$font-weight-light:	  300;
+$font-weight-bold:    700;
+$font-weight-base:    $font-weight-normal;
+
+/* Size settings */
+$max-width-base:      73.125rem; /* Cheatsheet: 1170px by default */
+$gutter-base:         1.875rem; /* Cheatsheet: 30px by default */
+
+$border-radius-base:  .25rem; /* Cheatsheet: 4px by default */
+$border-radius-medium: 1.875rem;  // 30px
+$border-width-base:   .0625rem; /* Cheatsheet: 1px by default */
+
+/* Color settings */
+$text-color-base:       #061E46;  // dark blue
+$text-color-medium:     lighten($text-color-base, 35%);
+$text-color-light:      lighten($text-color-base, 50%);
+$text-color-secondary: 	#707070;
+
+$background-color-base: #fff; // white
+$background-color-primary: #2074FF; // the blue color
+$background-color-secondary: #F4F4F4;  // the grey color
+$background-color-tertiary: #061E46; // dark blue color
+
+$border-color-base:     #2074FF; // the blue color
+$border-color-primary:  #DDDDDD;  // grey color
+$border-color-secondary:#707070;
+
+$primary-color:         #fff; // white
+$primary-hover-color:   darken($primary-color, 20%);
+$secondary-color:       #2074FF; // the blue color
+$secondary-hover-color: darken($secondary-color, 20%);
+
+/* hamburger settings */
+$bar-width: 1.875rem;
+$bar-height: 0.1875rem;
+$bar-spacing: 0.4375rem;
+$hamburger-color: #000; //black
+
+/* Transition settings */
+@mixin transition-base($time) {transition: color $time ease-out, background-color $time ease-out, border-color $time ease-out;}
+
+/* Extends */
+
+// @extend %flex-between;
+%flex-between {
+	display: flex;
+	justify-content: space-between;
+}
+
+// @extend %flex-vertical-center;
+%flex-vertical-center {
+	display: flex;
+	align-items: center;
+}
+
+// @extend %flex-center;
+%flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

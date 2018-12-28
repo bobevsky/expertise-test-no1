@@ -1,0 +1,106 @@
+#bottom {
+	padding: ($gutter-base*1.5) 0;
+	background-color: $background-color-tertiary;
+	@media screen and (min-width: 990px) {
+		padding: ($gutter-base*3) 0;
+	}
+	.wrap {
+	    @media screen and (min-width: 430px) {
+	    	display: flex;
+	    	align-items: center;
+	    }
+	    @media screen and (min-width: 990px) {
+			display: block;
+			padding: 0 ($gutter-base*2);
+		}
+	}
+	.col:first-child {
+		width: 80%;
+		margin: 0 auto;
+		@media screen and (min-width: 680px) {
+			width: 18%;
+			float: left;
+		}
+		@media screen and (min-width: 990px) {
+			width: 40%;
+		}
+		.logo-wrap {
+			text-align: left;
+			@media screen and (min-width: 430px) {
+				text-align: center;
+			}
+			@media screen and (min-width: 990px) {
+				width: 5.375rem;
+				text-align: left;
+			}
+		}
+	}
+	.col:not(:first-child) {
+		width: 80%;
+		margin: 0 auto;
+		@extend %flex-between;
+		flex-direction: column;
+		@media screen and (min-width: 680px) {
+			width: 57%;
+			float: left;
+			flex-direction: row;
+		}
+		@media screen and (min-width: 850px) {
+			width: 50%;
+		}
+		.inner {
+			color: white;
+			.title {
+				font-size: $font-size-large;
+				margin: 1.5rem 0 .5rem 0;
+				@media screen and (min-width: 680px) {
+					margin: 0 0 .5rem 0;
+				}
+			}
+
+			.title:first-child {
+				@media screen and (min-width: 430px) {
+					margin-top: 0;
+				}
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+				font-size: $font-size-small;
+				color: $text-color-secondary;
+				@media screen and (min-width: 680px) {
+					line-height: $line-height-base;
+				}
+				a {
+					color: $text-color-secondary;
+					text-decoration: none;
+					&:hover {
+						color: lighten($text-color-secondary, 35%);
+					}
+				}
+			}
+		}
+
+		.inner:first-child {
+			ul li:nth-child(2){
+				margin-bottom: 1.875rem;
+			}
+		}
+		
+	}
+	.clear {
+		@media screen and (min-width: 680px) {
+			clear: both;
+		}
+		border: none;
+		margin: 0; 
+	}
+
+	.footer-img {
+		@media screen and (min-width: 990px) {
+			width: 100%;
+		}
+	}
+}
